@@ -2,6 +2,22 @@
 
 Unit testing best practices
 
+## F.I.R.S.T Properties of Unit Tests
+
+At a high level, aim to achieve the following goals for your unit tests.
+> Ref: http://agileinaflash.blogspot.co.uk/2009/02/first.html
+
+**F**ast: the faster your tests run, the more often you’ll run them
+
+**I**solated: each unit test should have a single reason to fail
+
+**R**epeatable: you should obtain the same results every time you run a test
+
+**S**elf-Verifying: a good unit test fails or passes unambiguously
+
+**T**imely: should you write tests before writing the production code or after it’s already built?
+
+
 ## Unit Testing Review Guidelines
 
 Use the following checklist as things to consider when writing unit tests.
@@ -54,7 +70,7 @@ Avoid direct calls to static methods. Prefer calls to instance methods that late
 Avoid constructors and static constructors that do logic | Overriding constructors is difficult to implement. Keeping constructors simple will simplyfy the job of inheriting from a class in your tests.
 Seperate singleton logic from singleton holder | If you have a singleton, have a way to replace its instance so you can inject a stub singleton or reset it
 
-## Unit Tests Naming Conventions
+## Unit Test Naming Conventions
 
 Observe the following conventions when naming your tests.
 
@@ -70,5 +86,6 @@ Here are the three parts of the method name:
 * **MethodName** - The name of the method you're testing
 * **StateUnderTest** - The conditions used to produce the expected behaviour
 * **ExpectedTestBehavior** - What you expect the tested method to do under the specified conditions
+
 
 
