@@ -1,11 +1,10 @@
-# unit-testing-guidelines
+# Unit Testing best practices
 
-Unit testing best practices
+The following is a collection of conventions and best practices to help achieve effective and maintainable unit tests.
 
 ## F.I.R.S.T Properties of Unit Tests
 
 At a high level, aim to achieve the following goals for your unit tests.
-> [F.I.R.S.T](http://agileinaflash.blogspot.co.uk/2009/02/first.html)
 
 **F**ast: the faster your tests run, the more often you’ll run them
 
@@ -17,6 +16,7 @@ At a high level, aim to achieve the following goals for your unit tests.
 
 **T**imely: should you write tests before writing the production code or after it’s already built?
 
+> [F.I.R.S.T](http://agileinaflash.blogspot.co.uk/2009/02/first.html)
 
 ## Unit Testing Review Guidelines
 
@@ -119,6 +119,7 @@ A stub differs from a mock in that a stub can never fail a test. The asserts the
 To put it another way, stubs use state verification whereas mocks use behaviour verification.
 
 > [Mocks Aren't Stubs](http://martinfowler.com/articles/mocksArentStubs.html)
+
 > The Art of Unit Testing, 4.1 State-based versus interaction testing
 
 
