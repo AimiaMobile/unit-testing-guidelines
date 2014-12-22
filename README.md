@@ -7,6 +7,7 @@ Unit testing best practices
 Use the following checklist as things to consider when writing unit tests.
 
 This is a mirror of:
+
 The Art of Unit Testing - Unit Testing Review Guidelines (http://artofunittesting.com/unit-testing-review-guidelines/)
 
 #### Readability
@@ -43,7 +44,7 @@ The Art of Unit Testing - Unit Testing Review Guidelines (http://artofunittestin
 
 The following guidelines will help you to design more testable code.
 
-Ref: The Art of Unit Testing, Appendix A.2: Design goals for testability
+> Ref: The Art of Unit Testing, Appendix A.2: Design goals for testability
 
 Design guideline | Benefit(s)
 --- | ---
@@ -53,5 +54,21 @@ Avoid direct calls to static methods. Prefer calls to instance methods that late
 Avoid constructors and static constructors that do logic | Overriding constructors is difficult to implement. Keeping constructors simple will simplyfy the job of inheriting from a class in your tests.
 Seperate singleton logic from singleton holder | If you have a singleton, have a way to replace its instance so you can inject a stub singleton or reset it
 
+## Unit Tests Naming Conventions
+
+Observe the following conventions when naming your tests.
+
+> Ref: The Art of Unit Testing, Table 2.2. Basic rules for placing and naming tests
+
+Object to be tested | Object to create on the testing side
+--- | ---
+Project | Create a test project named **[ProjectUnderTest]Tests**
+Class | For each class, create at least one class with the name **[Class-Name]Tests**
+Method | For each method, create at least one test method with the following name: **[Method-Name]_[StateUnderTest]_[ExpectedBehaviour]**
+
+Here are the three parts of the method name:
+* **MethodName** - The name of the method you're testing
+* **StateUnderTest** - The conditions used to produce the expected behaviour
+* **ExpectedTestBehavior** - What you expect the tested method to do under the specified conditions
 
 
