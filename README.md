@@ -5,7 +5,7 @@ Unit testing best practices
 ## F.I.R.S.T Properties of Unit Tests
 
 At a high level, aim to achieve the following goals for your unit tests.
-> Ref: http://agileinaflash.blogspot.co.uk/2009/02/first.html
+> [F.I.R.S.T](http://agileinaflash.blogspot.co.uk/2009/02/first.html)
 
 **F**ast: the faster your tests run, the more often you’ll run them
 
@@ -24,7 +24,7 @@ Use the following checklist as things to consider when writing unit tests.
 
 This is a mirror of:
 
-The Art of Unit Testing - Unit Testing Review Guidelines (http://artofunittesting.com/unit-testing-review-guidelines/)
+[The Art of Unit Testing - Unit Testing Review Guidelines](http://artofunittesting.com/unit-testing-review-guidelines/)
 
 #### Readability
 
@@ -60,7 +60,7 @@ The Art of Unit Testing - Unit Testing Review Guidelines (http://artofunittestin
 
 The following guidelines will help you to design more testable code.
 
-> Ref: The Art of Unit Testing, Appendix A.2: Design goals for testability
+> The Art of Unit Testing, Appendix A.2: Design goals for testability
 
 Design guideline | Benefit(s)
 --- | ---
@@ -74,7 +74,7 @@ Seperate singleton logic from singleton holder | If you have a singleton, have a
 
 Observe the following conventions when naming your tests.
 
-> Ref: The Art of Unit Testing, Table 2.2. Basic rules for placing and naming tests
+> The Art of Unit Testing, Table 2.2. Basic rules for placing and naming tests
 
 Object to be tested | Object to create on the testing side
 --- | ---
@@ -108,5 +108,17 @@ Here's a simple example (XCTest) that demonstrates all three:
   XCTAssert(offer.isActive, @"offer should be activated");
 }
 ```
+
+## Mocks vs Stubs
+
+A mock object is a fake object in the system that decides wheter the unit test has passed or failed. It does so by verifying whether the object under test interacted as expected with the fake object. There's usually no more than one mock per test. Mocks are used for interaction testing. It will save the history of communication, which will be verified later.
+
+A stub is a controllable replacement for an existing dependency (or collaborator) in the system. By using a stub, you can test your code without dealing with the dependency directly.
+A stub differs from a mock in that a stub can never fail a test. The asserts the test uses are always against the class under test.
+
+To put it another way, stubs use state verification whereas mocks use behaviour verification.
+
+> [Mocks Aren't Stubs](http://martinfowler.com/articles/mocksArentStubs.html)
+> The Art of Unit Testing, 4.1 State-based versus interaction testing
 
 
