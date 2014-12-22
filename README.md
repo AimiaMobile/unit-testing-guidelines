@@ -2,6 +2,8 @@
 
 The following is a collection of conventions and best practices to help achieve effective and maintainable unit tests.
 
+Large portions of the content was lifted directly from the excellent book, [The Art of Unit Testing](http://www.amazon.co.uk/The-Art-Unit-Testing-Examples/dp/1933988274)
+
 ## F.I.R.S.T Properties of Unit Tests
 
 At a high level, aim to achieve the following goals for your unit tests.
