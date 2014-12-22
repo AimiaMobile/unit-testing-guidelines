@@ -97,7 +97,7 @@ A unit test usually comprises three main actions:
 Here's a simple example (XCTest) that demonstrates all three:
 
 ```objc
-- (void)testActivateOffer_newOffer_ActivatedOffer {
+- (void)testActivateOffer_newOffer_ActivatesOffer {
   // arrange
   Offer *offer = [OfferFactory getLatestNewOffer];
   
