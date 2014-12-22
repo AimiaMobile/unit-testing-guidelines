@@ -87,5 +87,26 @@ Here are the three parts of the method name:
 * **StateUnderTest** - The conditions used to produce the expected behaviour
 * **ExpectedTestBehavior** - What you expect the tested method to do under the specified conditions
 
+## Structuring Tests
+
+A unit test usually comprises three main actions:
+* Arrange objects, creating and setting them up as necessary
+* Act on an object
+* Assert that something is as expected
+
+Here's a simple example (XCTest) that demonstrates all three:
+
+```objc
+- (void)testActivateOffer_newOffer_ActivatedOffer {
+  // arrange
+  Offer *offer = [OfferFactory getLatestNewOffer];
+  
+  // act
+  [offer activate]
+  
+  // assert
+  XCTAssert(offer.isActive, @"offer should be activated");
+}
+```
 
 
